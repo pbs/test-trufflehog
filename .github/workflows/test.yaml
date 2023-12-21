@@ -1,18 +1,27 @@
 name: GitHub TruffleHog Action Test
 run-name: ${{ github.actor }} running TruffleHog
-on: [push]
+on:
+    push:
+      branches:
+        - main
+        - test
+    pull_request:
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-    - name: TruffleHog
-      uses: trufflesecurity/trufflehog@main
-      with:
-        # Repository path
-        path: /
-        # Start scanning from here (usually main branch).
-        base: main
-        # Scan commits until here (usually dev branch).
-        head: # optional
-        # Extra args to be passed to the trufflehog cli.
-        extra_args: --debug --only-verified
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+        - name: Secret Scanning
+          uses: trufflesecurity/trufflehog@main
+          with:
+            extra_args: --only-verified
+        - name: Scan entire branch
+          uses: trufflesecurity/trufflehog@main
+          with:
+            path: /
+            base: ""
+            head: ${{ github.ref_name }}
+            extra_args: --debug --only-verified
