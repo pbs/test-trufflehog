@@ -4,7 +4,7 @@
 // MySQL Connection Parameters
 $host = "localhost";
 $user = "your_username";
-$password = "your_password";
+$password = "php_password";
 $database = "your_database";
 
 // Connect to MySQL
