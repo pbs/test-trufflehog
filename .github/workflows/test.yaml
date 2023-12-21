@@ -13,11 +13,11 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
           with:
-            fetch-depth: 0
+            fetch-depth: 2
         - name: Secret Scanning
           uses: trufflesecurity/trufflehog@main
           with:
-            extra_args: --only-verified
+            extra_args: --debug --only-verified
         - name: Scan entire branch
           uses: trufflesecurity/trufflehog@main
           with:
