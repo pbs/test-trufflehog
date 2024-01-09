@@ -4,9 +4,13 @@ run-name: ${{ github.actor }} running TruffleHog
 on:
     push:
       branches:
-        - main
-        - test
+        - '**'
     pull_request:
+      branches:
+        - '**'
+      types:
+        - opened
+        - reopened
 
 permissions:
     contents: read
