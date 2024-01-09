@@ -1,0 +1,17 @@
+name: GitHub TruffleHog Action Test Reusable Workflow
+run-name: ${{ github.actor }} running TruffleHog
+
+on:
+    push:
+      branches:
+        - main
+        - test
+    pull_request:
+
+jobs:
+    # call-workflow-in-local-repo:
+    #   uses: octo-org/this-repo/.github/workflows/workflow.yaml@172239021f7ba04fe7327647b213799853a9eb89
+    call-workflow-in-local-repo:
+      uses: ./.github/workflows/workflow.yaml
+    # call-workflow-in-another-repo:
+    #   uses: octo-org/another-repo/.github/workflows/workflow.yaml@v1
