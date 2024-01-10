@@ -1,5 +1,5 @@
 name: GitHub TruffleHog Action Test Reusable Workflow
-run-name: ${{ github.actor }} running TruffleHog
+run-name: ${{ github.actor }} running local workflow
 
 on:
     push:
