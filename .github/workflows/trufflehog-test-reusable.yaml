@@ -13,8 +13,6 @@ on:
         - reopened
 
 jobs:
-    # call-workflow-in-local-repo:
-    #   uses: octo-org/this-repo/.github/workflows/workflow.yaml@172239021f7ba04fe7327647b213799853a9eb89
     call-workflow-in-local-repo:
       uses: ./.github/workflows/workflow.yaml
       permissions:
@@ -22,5 +20,3 @@ jobs:
         id-token: write
         issues: write
         pull-requests: write
-    # call-workflow-in-another-repo:
-    #   uses: octo-org/another-repo/.github/workflows/workflow.yaml@v1
