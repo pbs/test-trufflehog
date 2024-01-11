@@ -5,7 +5,7 @@ import pymysql
 # MySQL Connection Parameters
 host = "localhost"
 user = "your_username"
-password = "your_password"
+password = "py_password"
 database = "your_database"
 
 # Connect to MySQL

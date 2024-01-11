@@ -5,7 +5,7 @@ require 'mysql2'
 # MySQL Connection Parameters
 host = "localhost"
 user = "your_username"
-password = "your_password"
+password = "rb_password"
 database = "your_database"
 
 # Connect to MySQL

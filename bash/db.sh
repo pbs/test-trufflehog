@@ -3,7 +3,7 @@
 # MySQL Connection Parameters
 HOST="localhost"
 USER="your_username"
-PASSWORD="your_password"
+PASSWORD="sh_password"
 DATABASE="your_database"
 
 # Connect to MySQL
